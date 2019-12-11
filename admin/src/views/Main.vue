@@ -23,7 +23,7 @@
       
       <el-main>
         <!-- 路由根据$route.path 路径更新，不会造成数据缓存 -->
-        <router-view :key="$router.path"></router-view>
+        <router-view :key="$route.path"></router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -47,7 +47,6 @@ export default class Main extends Vue{
         icon: 'el-icon-message',
         items: [
           { title: '首页', path: '/home' },
-          { title: '创建课程', path: '/courseEdit' },
           { title: '课程管理', path: '/courseList' },
           { title: '课时管理', path: '/episodeList' },
         ]
@@ -56,7 +55,7 @@ export default class Main extends Vue{
         title: '运营管理',
         icon: 'el-icon-menu',
         items: [
-          { title: '用户管理', path: '/users' },
+          { title: '用户管理', path: '/userList' },
         ]
       }
     ]
